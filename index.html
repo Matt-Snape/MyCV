@@ -1,0 +1,417 @@
+<!-- On this page add any elements you would like to create a webpage that
+acts as an online CV. This is your personal webpage, so feel free to customise it to suit your needs but make sure that you include at least the following:
+ 
+○ A short bio. Add a short (no more than about three paragraphs) description of yourself. Who are you? What is your experience? What are your passions? 
+What motivates you? What is it that you would most like to do? Etc.
+○ Your contact details. E.g. name, contact number, email address, links to any of your (professional) social media including LinkedIn. An image of yourself.
+○ A list of your skills and competencies.
+○ Describe your education.
+○ Describe your work experience.
+○ As you progress through this course you can keep adding to this
+personal webpage. For example, in the near future, you can describe some projects that you have worked on and add links to the code (in GitHub).
+○ Add links to any blog posts or articles that you have written. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/99620259a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Matthew Snape</title>
+  </head>
+
+  <body>
+    <div class="container-fluid text-center py-3 topbar custom-padding-top">
+      <h1 class="display-9">Matthew Snape</h1>
+      <p class="lead">Junior Full Stack Web Developer & Software Engineer</p>
+    </div>
+    <!-- Wave effect -->
+    <div class="custom-shape-divider-top-1708449407">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+    <!-- Contact card - more professional picture to appear soon! -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mt-4">
+          <div>
+            <img
+              src="./restaurant.png"
+              class="card-img-top img-fluid rounded-circle mx-auto d-block"
+              alt="Matthew Snape"
+              style="width: 50%"
+            />
+            <div class="card-body text-center mt-4">
+              <h4 class="card-title">
+                <i class="fa-regular fa-address-book"></i> Contact
+              </h4>
+              <p class="card-text mt-4">
+                <i class="fa-regular fa-envelope"></i>
+                <a href="mailto:matthewsnape18@gmail.com"
+                  >matthewsnape18@gmail.com</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa-brands fa-linkedin"></i>
+                <a
+                  href="https://www.linkedin.com/in/matthew-snape-39a718255/"
+                  target="_blank"
+                  >Matthew Snape</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://github.com/Matt-Snape" target="_blank"
+                  >www.mygithub.com</a
+                >
+              </p>
+              <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                <a
+                  href="https://maps.app.goo.gl/dEmR2bVrnChKLon2A"
+                  target="_blank"
+                  >Sandbach, North West, UK - can commute</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Bio card and buttons for collapse -->
+        <div class="col-md-8 mt-4">
+          <div class="row mb-4">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title d-inline-block mb-4">
+                    <i class="fa-solid fa-user"></i> Bio
+                  </h4>
+                  <div class="float-end">
+                    <button
+                      id="toggleBio"
+                      class="btn btn-link"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#bio-content"
+                      aria-expanded="false"
+                      aria-controls="bio-content"
+                    >
+                      Click to find out more about me
+                    </button>
+                  </div>
+                  <!-- First paragraph outside the collapsible content -->
+                  <p class="card-text">
+                    Hi, I'm Matt. I am a UK based Software Engineer with a
+                    passion for building apps that people use to make their life
+                    better! I love writing JavaScript but I am experienced with
+                    HTML and CSS/Sass and working as part of a team within an
+                    agile management framework, particularly Scrum.
+                  </p>
+                  <!-- Collapsible content -->
+                  <div id="bio-content" class="collapse">
+                    <p class="card-text">
+                      After 12 years teaching Chemistry and Physics to young
+                      people aged 11-18, as well as managing small and medium
+                      department teams, I've decided I am ready for a move
+                      outside my comfort zone and to take on a new full-time
+                      challenge. Working in science, I have always enjoyed
+                      exploring why and how things work and have a pragmatic yet
+                      positive approach to life; a mindset which I have
+                      certainly been able to pour into my new career path. My
+                      time in education has given me strong interpersonal skills
+                      and an ability to communicate complex ideas simply and
+                      effectively.
+                    </p>
+                    <p class="card-text">
+                      I'm passionate about science, travel (which is convenient
+                      as my partner is Dutch), the great outdoors, my family and
+                      friends and my cat. In my spare time I run, hike, game
+                      (console and board variety) and am actively trying to
+                      improve my poor Dutch language skills. I'm keen on working
+                      for ethical and progressive companies to improve the lives
+                      of ordinary people.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Competencies section, fontawesome for icons image for Scrum colours 
+          to match main colours used online by those organisations-->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title mb-4">
+                    <i class="fa-solid fa-book mb-4"></i> Competencies
+                  </h4>
+                  <div class="row">
+                    <div class="col-3 text-center mb-4">
+                      <i
+                        class="fa-brands fa-html5 fa-2xl"
+                        style="color: #f70808"
+                      ></i>
+                      <p class="card-text">HTML</p>
+                    </div>
+                    <div class="col-3 text-center">
+                      <i
+                        class="fa-brands fa-css3-alt fa-2xl"
+                        style="color: #5180d2"
+                      ></i>
+                      <p class="card-text">CSS</p>
+                    </div>
+                    <div class="col-3 text-center">
+                      <i
+                        class="fa-brands fa-sass fa-2xl"
+                        style="color: #df4eda"
+                      ></i>
+                      <p class="card-text">SASS</p>
+                    </div>
+                    <div class="col-3 text-center">
+                      <i
+                        class="fa-brands fa-js fa-2xl"
+                        style="color: #ffd43b"
+                      ></i>
+                      <p class="card-text">JavaScript</p>
+                    </div>
+                    <div class="col-3 text-center">
+                      <img
+                        src="./CSMbadge.png"
+                        class=""
+                        alt="Matthew Snape"
+                        style="width: 40%"
+                      />
+                      <p class="card-text">Certified ScrumMaster</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience and Education timelines -->
+        <div class="col-md-12">
+          <div class="container">
+            <h4 class="pb-3 pt-2 border-bottom">
+              <i class="fa-solid fa-user-tie mt-5"></i> Work Experience
+            </h4>
+            <!--first section-->
+            <div class="row align-items-center snake d-flex">
+              <div
+                class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">1</div>
+              </div>
+              <div class="col-6">
+                <h5>Teaching</h5>
+                <p>
+                  2012-present, Chemistry and Physics classroom teacher in an
+                  11-18 school, department manager & senior leader
+                </p>
+              </div>
+            </div>
+            <!--path between 1-2-->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner top-right"></div>
+              </div>
+              <div class="col-8">
+                <hr />
+              </div>
+              <div class="col-2">
+                <div class="corner left-bottom"></div>
+              </div>
+            </div>
+            <!--second section-->
+            <div
+              class="row align-items-center justify-content-end snake d-flex"
+            >
+              <div class="col-6 text-right">
+                <h5>Retail Management</h5>
+                <p>
+                  2007-2010, managing teams of up to 50 colleagues for a large
+                  UK based retailer
+                </p>
+              </div>
+              <div
+                class="col-2 text-center full d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">2</div>
+              </div>
+            </div>
+            <!--path between 2-3-->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner right-bottom"></div>
+              </div>
+              <div class="col-8">
+                <hr />
+              </div>
+              <div class="col-2">
+                <div class="corner top-left"></div>
+              </div>
+            </div>
+            <!--third section-->
+            <div class="row align-items-center snake d-flex">
+              <div
+                class="col-2 text-center top d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">3</div>
+              </div>
+              <div class="col-6">
+                <h5>Internet Marketing</h5>
+                <p>
+                  2005-2006, part of my undergraduate degree, working as part of
+                  a team for a large international bank to deliver internet
+                  marketing campaigns
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <h4 class="pb-3 pt-2 border-bottom">
+              <i class="fa-solid fa-graduation-cap mt-5"></i> Education
+            </h4>
+            <!--first section-->
+            <div class="row align-items-center snake d-flex">
+              <div
+                class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">1</div>
+              </div>
+              <div class="col-6">
+                <h5>HyperionDev</h5>
+                <p>
+                  2024-2025 Certified Full Stack Software Engineering and Web
+                  Development
+                </p>
+              </div>
+            </div>
+            <!--path between 1-2-->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner top-right"></div>
+              </div>
+              <div class="col-8">
+                <hr />
+              </div>
+              <div class="col-2">
+                <div class="corner left-bottom"></div>
+              </div>
+            </div>
+            <!--second section-->
+            <div
+              class="row align-items-center justify-content-end snake d-flex"
+            >
+              <div class="col-6 text-right">
+                <h5>Scrum Alliance</h5>
+                <p>2020 Certified Scrum Master</p>
+              </div>
+              <div
+                class="col-2 text-center full d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">2</div>
+              </div>
+            </div>
+            <!--path between 2-3-->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner right-bottom"></div>
+              </div>
+              <div class="col-8">
+                <hr />
+              </div>
+              <div class="col-2">
+                <div class="corner top-left"></div>
+              </div>
+            </div>
+            <!--third section-->
+            <div class="row align-items-center snake d-flex">
+              <div
+                class="col-2 text-center top d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">3</div>
+              </div>
+              <div class="col-6">
+                <h5>Keele University</h5>
+                <p>
+                  2009-2011 Chemistry Certificate of higher education &
+                  Postgraduate Certificate in Higher Education (Science)
+                </p>
+              </div>
+            </div>
+            <!--path between 3-4-->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner top-right"></div>
+              </div>
+              <div class="col-8">
+                <hr />
+              </div>
+              <div class="col-2">
+                <div class="corner left-bottom"></div>
+              </div>
+            </div>
+            <!--fourth section-->
+            <div
+              class="row align-items-center justify-content-end snake d-flex"
+            >
+              <div class="col-6 text-right">
+                <h5>Loughborough University</h5>
+                <p>
+                  2007 Business Studies and Information Management BSc (Hons)
+                </p>
+              </div>
+              <div
+                class="col-2 text-center full d-inline-flex justify-content-center align-items-center"
+              >
+                <div class="circle font-weight-bold">4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center py-3 topbar mt-4">
+      Page designed using Bootstrap and CSS; pure CSS examples available in my
+      portfolio
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+<!-- 
+references 
+https://bootsnipp.com/snippets/O5q8E -->
